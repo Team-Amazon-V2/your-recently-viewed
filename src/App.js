@@ -52,31 +52,31 @@ class RecentlyViewed extends React.Component {
       return (
          <div className="recently-viewed">
             <h2>Products customers also bought</h2>
-            <div className="carousel">
-               <button id="prevBtn" onClick={moveLeft}>
+            <div className="carouselRV">
+               <button id="prevBtnRV" onClick={moveLeft}>
                   &lt;
                </button>
-               <div className="slider">
-                  <div className="innerSlider" style={{ transform: `${this.state.transform}` }}>
+               <div className="sliderRV">
+                  <div className="innerSliderRV" style={{ transform: `${this.state.transform}` }}>
                      {this.state.productList.map((product) => {
                         return (
-                           <div className="productCard" key={product.id}>
-                              <img id="pic" src={product.picture} />
-                              <a id="name" href="#">
+                           <div className="productCardRV" key={product.id}>
+                              <img id="picRV" src={product.picture} />
+                              <a id="nameRV" href="#">
                                  {product.product_name}
                               </a>
                               <div>
                                  <Rating initialValue={Number(product.rating)} {...starSettings} />
-                                 <u id="revNum">{product.reviews}</u>
+                                 <u id="revNumRV">{product.reviews}</u>
                               </div>
-                              <div id="price">${product.price}</div>
-                              <div id="shipping">Prime FREE Delivery</div>
+                              <div id="priceRV">${product.price}</div>
+                              <div id="shippingRV">Prime FREE Delivery</div>
                            </div>
                         );
                      })}
                   </div>
                </div>
-               <button id="nextBtn" onClick={moveRight}>
+               <button id="nextBtnRV" onClick={moveRight}>
                   &gt;
                </button>
             </div>

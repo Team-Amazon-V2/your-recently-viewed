@@ -4,7 +4,7 @@ import "./index.css";
 import RecentlyViewed from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("your-recently-viewed"));
 root.render(
    <React.StrictMode>
       <RecentlyViewed />
