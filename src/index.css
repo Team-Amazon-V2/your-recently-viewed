@@ -1,13 +1,103 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+* {
+   font-family: "Lato", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#pic {
+   max-height: 160px;
+   max-width: 160px;
+}
+
+#pic:hover {
+   cursor: pointer;
+}
+
+.productCard {
+   width: 160px;
+}
+/* Root container for the carousel */
+.carousel {
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+}
+
+/* Should be the track where the content will slide */
+.slider {
+   overflow: hidden;
+   min-width: auto;
+   width: 1200px;
+}
+
+/* Where content is located */
+.innerSlider {
+   position: relative;
+   display: flex;
+   gap: 40px;
+   transform-origin: 0px;
+   margin: 0px 10px;
+   width: 2400px;
+}
+
+#name {
+   text-decoration: none;
+   color: steelblue;
+   line-height: 20px;
+   overflow: none;
+}
+
+#name:hover {
+   cursor: pointer;
+   color: #c47601;
+}
+
+#revNum {
+   text-decoration: none;
+   color: steelblue;
+   line-height: 20px;
+   font-size: 12px;
+}
+
+#revNum:hover {
+   cursor: pointer;
+   color: #c47601;
+}
+
+#price {
+   font-size: 18px;
+}
+
+#prevBtn,
+#nextBtn {
+   display: flex;
+   background-color: white;
+   color: rgb(70, 70, 70);
+   height: 37px;
+   width: 34px;
+   font-size: 25px;
+   text-size-adjust: 100%;
+   border: solid 1px rgb(211 211 211);
+   box-shadow: #cacaca 0px 0px 3px 0px;
+   border-radius: 5px;
+   margin: auto;
+   justify-content: center;
+   align-items: center;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+   cursor: pointer;
+   background-color: rgb(250, 250, 250);
+}
+
+#prevBtn:active,
+#nextBtn:active {
+   background-color: rgb(0 194 255 / 11%);
+   border: solid steelblue 1px;
+}
+
+#shipping {
+   font-size: 12px;
+   font-weight: light;
 }
